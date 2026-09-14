@@ -2,20 +2,41 @@
  * \file  velha.cpp
  */
 
- 
 #include "velha.hpp"
 
-/** 
- * @brief verifica situacao do jogo da velha  
- * @author Programador 
- * @param  velha descreve o parametro
- * 
- *  Descrever o que a funcao faz
- */ 
-
-int VerificaVelha( int velha[3][3] )
+/**
+ * \brief Verifica a situacao do jogo da velha.
+ *
+ * \param velha Tabuleiro 3x3.
+ * \return 1 se X venceu, 2 se O venceu, 0 caso contrario.
+ */
+int VerificaVelha(int velha[3][3])
 {
-	return 1; /*!< retorna zero para teste */ 
+    // Verifica linhas
+    for (int i = 0; i < 3; i++) {
+        if (velha[i][0] == velha[i][1] &&
+            velha[i][1] == velha[i][2]) {
+            if (velha[i][0] == 1) {
+                return 1;
+            }
+            if (velha[i][0] == 2) {
+                return 2;
+            }
+        }
+    }
+
+    // Verifica colunas
+    for (int j = 0; j < 3; j++) {
+        if (velha[0][j] == velha[1][j] &&
+            velha[1][j] == velha[2][j]) {
+            if (velha[0][j] == 1) {
+                return 1;
+            }
+            if (velha[0][j] == 2) {
+                return 2;
+            }
+        }
+    }
+
+    return 0;
 }
-
-
