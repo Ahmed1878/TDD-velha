@@ -1,0 +1,5 @@
+velha.o
+testa_velha
+*.gcda
+*.gcno
+*.gcov
