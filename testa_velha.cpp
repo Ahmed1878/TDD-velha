@@ -52,3 +52,10 @@ TEST_CASE( "Testa jogo impossivel", "[single-file]" ) {
 
     REQUIRE( VerificaVelha(teste6) == -2 );
 }
+TEST_CASE( "Testa vitoria diagonal do O", "[single-file]" ) {
+    int teste7[3][3] = { { 1, 0, 2 },
+                         { 0, 2, 1 },
+                         { 2, 1, 0 } };
+
+    REQUIRE( VerificaVelha(teste7) == 2 );
+}
