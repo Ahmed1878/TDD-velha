@@ -74,3 +74,10 @@ TEST_CASE( "Testa vitoria por linha do X", "[single-file]" ) {
 
     REQUIRE( VerificaVelha(teste9) == 1 );
 }
+TEST_CASE( "Testa vitoria por linha do O", "[single-file]" ) {
+    int teste10[3][3] = { { 2, 2, 2 },
+                          { 1, 0, 1 },
+                          { 0, 1, 0 } };
+
+    REQUIRE( VerificaVelha(teste10) == 2 );
+}
