@@ -32,6 +32,10 @@ TEST_CASE( "Testa velha", "[single-file]" ) {
 
     REQUIRE( VerificaVelha(teste3) == 1 );
 } 
- 
+ TEST_CASE( "Testa empate", "[single-file]" ) {
+    int teste4[3][3] = { { 1, 2, 1 },
+                         { 2, 1, 2 },
+                         { 2, 1, 2 } };
 
-
+    REQUIRE( VerificaVelha(teste4) == 0 );
+}
