@@ -67,3 +67,10 @@ TEST_CASE( "Testa vitoria diagonal inversa do X", "[single-file]" ) {
     REQUIRE( VerificaVelha(teste8) == 1 );
 }
 
+TEST_CASE( "Testa vitoria por linha do X", "[single-file]" ) {
+    int teste9[3][3] = { { 1, 1, 1 },
+                         { 2, 0, 2 },
+                         { 0, 2, 0 } };
+
+    REQUIRE( VerificaVelha(teste9) == 1 );
+}
