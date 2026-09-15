@@ -81,3 +81,18 @@ TEST_CASE( "Testa vitoria por linha do O", "[single-file]" ) {
 
     REQUIRE( VerificaVelha(teste10) == 2 );
 }
+TEST_CASE( "Testa vitoria por coluna do X", "[single-file]" ) {
+    int teste11[3][3] = { { 1, 2, 0 },
+                          { 1, 0, 2 },
+                          { 1, 2, 0 } };
+
+    REQUIRE( VerificaVelha(teste11) == 1 );
+}
+
+TEST_CASE( "Testa vitoria por coluna do O", "[single-file]" ) {
+    int teste12[3][3] = { { 1, 2, 0 },
+                          { 0, 2, 1 },
+                          { 1, 2, 0 } };
+
+    REQUIRE( VerificaVelha(teste12) == 2 );
+}
