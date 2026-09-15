@@ -58,5 +58,28 @@ int VerificaVelha(int velha[3][3])
             return 2;
         }
     }
-    return 0;
+    // Verifica se o jogo ainda esta indefinido
+    int quantidadeX = 0;
+    int quantidadeO = 0;
+    int vazias = 0;
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (velha[i][j] == 1) {
+                quantidadeX++;
+            } else if (velha[i][j] == 2) {
+                quantidadeO++;
+            } else if (velha[i][j] == 0) {
+                vazias++;
+            }
+        }
+    }
+
+    if (quantidadeX + quantidadeO == 0) {
+        return -1;
+    }
+
+    if (quantidadeX == 1 && quantidadeO == 0) {
+        return -1;
+    }    return 0;
 }
