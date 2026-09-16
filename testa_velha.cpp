@@ -96,3 +96,4 @@ TEST_CASE( "Testa vitoria por coluna do O", "[single-file]" ) {
 
     REQUIRE( VerificaVelha(teste12) == 2 );
 }
+
